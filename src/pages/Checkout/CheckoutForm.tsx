@@ -1,21 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import $ from 'jquery';
 import { ShopContext } from "../../context/ShopContext";
 import { ProductType } from '../../utils/types';
 import BoughtProduct from './BoughtProduct';
+import { countryList, stateList } from '../../utils/serviceData';
 
 export const CheckoutForm = (props: any): JSX.Element => {
 
   const { productList, totalCost, setTotalCost, userInfo, setUserInfo } = React.useContext(ShopContext);
-
-  const countryList = [
-    'United States'
-  ];
-
-  const stateList = [
-    'California'
-  ]
 
   const navigate = useNavigate();
 

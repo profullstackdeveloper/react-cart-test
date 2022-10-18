@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
+import { getProductList } from '../utils/serviceData';
 import { PaymentMethod, ProductType, UserType } from '../utils/types';
 
 interface ProviderPropTypes {
@@ -31,18 +32,8 @@ export default function ShopeContextProvider({ children }: ProviderPropTypes) {
     }, [productList])
 
     React.useEffect(() => {
-        setProductList([{
-            name: 'Product name',
-            description: 'Product description',
-            price: 25.00,
-            amount: 0,
-        },
-        {
-            name: 'Product name',
-            description: 'Product description',
-            price: 25.00,
-            amount: 0
-        },]);
+        const products = getProductList();
+        setProductList(products);
     }, []);
 
     return (
