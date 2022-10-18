@@ -76,7 +76,7 @@ export const ShoppingCartPanel = (props: any): JSX.Element => {
             <div className="card-footer">
               <div className="row text-center align-items-center">
                 <div className="col-9">
-                  <h4 className="text-end mb-0 h5">Total <strong>${Math.round(totalCost).toFixed(2)}</strong></h4>
+                  <h4 className="text-end mb-0 h5">Total <strong>${Math.round(totalCost - 5).toFixed(2)}</strong></h4>
                 </div>
                 <div className="col-3">
                   <button type="button" className="btn btn-success w-100" onClick={() => navigate('/checkout-form')}>

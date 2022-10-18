@@ -64,7 +64,7 @@ export const PaymentInterface = (props: any): JSX.Element => {
                 </span>
                 <span className="badge bg-white text-primary">
                   <FontAwesomeIcon icon={faUsd} />
-                  {totalCost}
+                  {totalCost - 5}
                 </span>
               </div>
             </li>

@@ -7,7 +7,7 @@ import { countryList, stateList } from '../../utils/serviceData';
 
 export const CheckoutForm = (props: any): JSX.Element => {
 
-  const { productList, totalCost, setTotalCost, userInfo, setUserInfo } = React.useContext(ShopContext);
+  const { productList, totalCost, userInfo, setUserInfo } = React.useContext(ShopContext);
 
   const navigate = useNavigate();
 
@@ -27,9 +27,6 @@ export const CheckoutForm = (props: any): JSX.Element => {
     setUserInfo({ ...userInfo, [target.name]: target.id });
   }
 
-  React.useEffect(() => {
-    setTotalCost(totalCost - 5);
-  }, [])
 
   return (
     <div className="container justify-content-center">
@@ -56,7 +53,7 @@ export const CheckoutForm = (props: any): JSX.Element => {
             </li>
             <li className="list-group-item d-flex justify-content-between">
               <span>Total (USD)</span>
-              <strong>${totalCost}</strong>
+              <strong>${totalCost - 5}</strong>
             </li>
           </ul>
 
