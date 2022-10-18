@@ -24,7 +24,6 @@ export default function ShopeContextProvider({ children }: ProviderPropTypes) {
 
     React.useEffect(() => {
         let sum = 0;
-        console.log('product list changed to ', productList);
         productList.forEach((product) => {
             sum += product.amount * product.price;
         });

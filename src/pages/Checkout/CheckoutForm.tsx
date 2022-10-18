@@ -13,7 +13,6 @@ export const CheckoutForm = (props: any): JSX.Element => {
 
   const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setUserInfo({ ...userInfo, [target.id]: target.value });
-    console.log(userInfo);
   }
 
   const handleCheck = ({ target }: React.ChangeEvent<HTMLInputElement>) => {

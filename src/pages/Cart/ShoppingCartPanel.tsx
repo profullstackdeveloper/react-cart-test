@@ -11,7 +11,6 @@ export const ShoppingCartPanel = (props: any): JSX.Element => {
   const { productList, setProductList, totalCost } = React.useContext(ShopContext);
 
   const removeProduct = (index: number): void => {
-    console.log('remove product called!');
     const temp: ProductType[] = productList.filter((product: ProductType, idx: number) => idx !== index);
     setProductList(temp);
   }
